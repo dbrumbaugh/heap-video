@@ -1,0 +1,95 @@
+Introduction to Binary Heaps
+
+Applications:
+    • Priority Queues 
+    • Sorting (Heap Sort)
+    • Sorted Array Merging
+
+Definition:
+    A heap is a tree that satisfies the "Heap Property"
+
+    Every vertex in the tree is smaller (or larger)
+    than its children.
+
+Abstract Data Type:
+    • Insert a new element
+    • Remove the root node (min/max element)
+    • Check if empty
+
+@img/heap1.png
+
+Complete Binary Tree
+    A binary tree (max 2 children for each vertex) where nodes
+    are always inserted from the last level, going left-to-right
+
+@img/heap2.png
+
+@img/heap3.png
+
+@img/heap4.png
+
+Complete Binary Tree Representation
+    An array, where for each vertex, k,
+    its left child is at index 2k and its 
+    right child is at index 2k+1
+
+
+@img/heap5.png
+
+Preserving the Heap Property
+    If we want to add an element to a heap, we cannot
+    do so at random: we must somehow preserve the heap
+    property.
+
+@img/heap6.png
+
+@img/heap7.png
+
+@img/heap8.png
+
+@img/heap9.png
+
+The shifting of vertices up the tree is called "up-heap". 
+
+Insert Algorithm:
+    1. Insert new vertex in the left-most open spot at the bottom of the tree
+    2. Repeatedly swap the vertex and its parent, until the vertex is larger
+       than the parent.
+This operation will, at worst, run in log(n).
+
+How about removing the root element? We'll replace it with the last vertex,
+and then correct the tree by swapping the vertex down.
+
+@img/heap10.png
+
+@img/heap11.png
+
+@img/heap12.png
+
+We must always swap with the smallest child vertex to ensure we don't
+create any new Heap Property violations.
+
+@img/heap13.png
+
+@img/heap14.png
+
+The shifting of vertices down the tree is called "down-heap".
+
+Remove Root Algorithm:
+    1. Remove the root vertex and replace it with the last vertex in the tree
+    2. Repeatedly swap the moved vertex with the smaller of its children, until
+       it is smaller than all its children (or becomes a leaf)
+This operation will again, at worst, run in log(n).
+
+Other Operations:
+    • Search for element
+    • Delete arbitrary element
+    • Modify element value
+But we won't talk about these explicitly.
+
+Okay, let's check out some code!
+
+
+
+
+
