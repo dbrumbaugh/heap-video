@@ -8,7 +8,7 @@
 
 #define LEFT(x) (2*(x) + 1)
 #define RIGHT(x) (2*(x) + 2)
-#define PARENT(x) ((x-1) / 2)
+#define PARENT(x) (((x)-1) / 2)
 
 static void swap(size_t *a, size_t *b);
 static ssize_t min_child(minheap *heap, size_t idx);
