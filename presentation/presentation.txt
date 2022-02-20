@@ -1,20 +1,47 @@
 Introduction to Binary Heaps
 
-Applications:
-    • Priority Queues 
-    • Sorting (Heap Sort)
-    • Sorted Array Merging
+Find the smallest element in a list
+
+@img/heap100.png
+
+Algorithmic Approach
+    • Scan the list for the smallest element
+    • Linear Search
+
+@img/heap100.png
+
+Structural Approach
+    • Reorganize the data in a way that answer the question
+
+We want to impose an ordering on the data
+
+What about sorting?
+
+@img/heap200.png
+
+This is still using an array--assigning a specific number
+to each value. Could we accomplish the task more efficiently
+with a weaker ordering?
+
+Yes! We can use a heap.
+
+@img/heap101.png
+
+
+@img/heap102.png
+     
+
+@img/heap103.png
+
+
+@img/heap104.png
+     
 
 Definition:
     A heap is a tree that satisfies the "Heap Property"
 
     Every vertex in the tree is smaller (or larger)
     than its children.
-
-Abstract Data Type:
-    • Insert a new element
-    • Remove the root node (min/max element)
-    • Check if empty
 
 @img/heap1.png
 
@@ -69,7 +96,11 @@ and then correct the tree by swapping the vertex down.
 We must always swap with the smallest child vertex to ensure we don't
 create any new Heap Property violations.
 
+@img/heap12.png
+
 @img/heap13.png
+
+@img/heap12.png
 
 @img/heap14.png
 

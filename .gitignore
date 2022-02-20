@@ -1,4 +1,5 @@
 heapsort
 heaptest
+query
 *.o
 .ccls-cache
